@@ -16,7 +16,7 @@ Site para o casamento de **Éric & Valéria** (12 de Setembro de 2026), com list
 
 ## 🚀 Deploy no Railway
 
-`https://casamentoericvaleria.up.railway.app/`
+`[https://casamentoericvaleria.up.railway.app/](https://casamentoericvaleria.up.railway.app/)`
 
 ---
 
