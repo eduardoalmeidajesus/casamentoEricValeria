@@ -2,510 +2,209 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Éric &amp; Valeria — 12 de Setembro de 2026</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Éric &amp; Valeria | 12 de Setembro de 2026</title>
+  <meta name="description" content="Site do casamento de Éric e Valeria, com informações do grande dia, lista de presentes e confirmação de presença." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20260424-5" />
 </head>
 <body>
-
-  <!-- ===== NAVEGAÇÃO ===== -->
-  <nav id="navbar">
+  <nav id="navbar" class="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
-      <span class="nav-logo">É &amp; V</span>
-      <ul class="nav-links">
+      <a class="nav-logo" href="#home" aria-label="Éric e Valeria">É &amp; V</a>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Início</a></li>
         <li><a href="#grande-dia">O Grande Dia</a></li>
         <li><a href="#presentes">Presentes</a></li>
         <li><a href="#rsvp">Presença</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ===== HOME ===== -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
+  <div class="mobile-quick-actions" aria-label="Atalhos rápidos">
+    <a class="btn btn-primary" href="#presentes">Ver presentes</a>
+    <a class="btn btn-dark" href="#rsvp">Confirmar presença</a>
+  </div>
 
-    <div class="hero-ornament top">
-      <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0" y1="20" x2="80" y2="20" stroke="currentColor" stroke-width="0.8"/>
-        <circle cx="100" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="0.8"/>
-        <circle cx="100" cy="20" r="2" fill="currentColor"/>
-        <line x1="120" y1="20" x2="200" y2="20" stroke="currentColor" stroke-width="0.8"/>
-        <circle cx="85" cy="20" r="2" fill="currentColor"/>
-        <circle cx="115" cy="20" r="2" fill="currentColor"/>
-      </svg>
-    </div>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Celebre conosco</p>
+        <h1>Éric <span>&amp;</span> Valeria</h1>
+        <p class="hero-date">12 de Setembro de 2026 · 16h · AREAC, Cascavel</p>
+        <div class="countdown" id="countdown" aria-label="Contagem regressiva para o casamento">
+          <div><strong id="dias">--</strong><small>Dias</small></div>
+          <div><strong id="horas">--</strong><small>Horas</small></div>
+          <div><strong id="minutos">--</strong><small>Min</small></div>
+          <div><strong id="segundos">--</strong><small>Seg</small></div>
+        </div>
+        <a class="btn btn-primary" href="#presentes">Ver Lista</a>
+      </div>
+      <a class="scroll-hint" href="#grande-dia" aria-label="Ir para detalhes do casamento">Detalhes</a>
+    </section>
 
-    <div class="hero-content">
-      <p class="hero-pre">Temos a honra de convidar você para celebrar</p>
-      <h1 class="hero-names">
-        <span class="name-left">Éric</span>
-        <span class="ampersand">&amp;</span>
-        <span class="name-right">Valeria</span>
-      </h1>
-      <p class="hero-date">
-        <span class="date-day">12</span>
-        <span class="date-sep">·</span>
-        <span class="date-month">Setembro</span>
-        <span class="date-sep">·</span>
-        <span class="date-year">2026</span>
-      </p>
-      <p class="hero-venue">AREAC · Rua Paranavaí, 1370 · Cascavel, PR</p>
-
-      <div class="countdown" id="countdown">
-        <div class="countdown-item">
-          <span class="count-num" id="dias">--</span>
-          <span class="count-label">Dias</span>
-        </div>
-        <div class="countdown-divider">:</div>
-        <div class="countdown-item">
-          <span class="count-num" id="horas">--</span>
-          <span class="count-label">Horas</span>
-        </div>
-        <div class="countdown-divider">:</div>
-        <div class="countdown-item">
-          <span class="count-num" id="minutos">--</span>
-          <span class="count-label">Minutos</span>
-        </div>
-        <div class="countdown-divider">:</div>
-        <div class="countdown-item">
-          <span class="count-num" id="segundos">--</span>
-          <span class="count-label">Segundos</span>
-        </div>
+    <section id="grande-dia" class="section day-section">
+      <div class="section-header reveal">
+        <p class="eyebrow">Anote na agenda</p>
+        <h2>O Grande Dia</h2>
+        <p>Uma tarde para celebrar a nossa história com as pessoas que fazem parte dela.</p>
       </div>
 
-      <a href="#grande-dia" class="btn-gold">Ver Detalhes</a>
-    </div>
-
-    <div class="hero-ornament bottom">
-      <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0" y1="20" x2="80" y2="20" stroke="currentColor" stroke-width="0.8"/>
-        <circle cx="100" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="0.8"/>
-        <circle cx="100" cy="20" r="2" fill="currentColor"/>
-        <line x1="120" y1="20" x2="200" y2="20" stroke="currentColor" stroke-width="0.8"/>
-        <circle cx="85" cy="20" r="2" fill="currentColor"/>
-        <circle cx="115" cy="20" r="2" fill="currentColor"/>
-      </svg>
-    </div>
-
-    <div class="scroll-hint">
-      <span>role para baixo</span>
-      <svg viewBox="0 0 24 24" width="16" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 5v14M5 12l7 7 7-7"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ===== O GRANDE DIA ===== -->
-  <section id="grande-dia" class="section-grande-dia">
-    <div class="section-header">
-      <p class="section-pre">Anote na agenda</p>
-      <h2 class="section-title">O Grande Dia</h2>
-      <div class="section-divider">
-        <svg viewBox="0 0 160 20" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="10" x2="60" y2="10" stroke="currentColor" stroke-width="0.8"/>
-          <path d="M80 4 L84 10 L80 16 L76 10 Z" fill="currentColor"/>
-          <line x1="100" y1="10" x2="160" y2="10" stroke="currentColor" stroke-width="0.8"/>
-        </svg>
-      </div>
-      <p class="section-sub">Todos os detalhes do nosso dia mais especial — esperamos você lá! 💛</p>
-    </div>
-
-    <div class="info-cards reveal-group">
-      <div class="info-card reveal">
-        <div class="info-card-icon">📅</div>
-        <h3 class="info-card-label">Data</h3>
-        <p class="info-card-value">12 de Setembro de 2026</p>
-        <p class="info-card-sub">Sábado</p>
-      </div>
-      <div class="info-card reveal">
-        <div class="info-card-icon">⏰</div>
-        <h3 class="info-card-label">Horário</h3>
-        <p class="info-card-value">16:00</p>
-        <p class="info-card-sub">Pontualmente</p>
-      </div>
-      <div class="info-card reveal">
-        <div class="info-card-icon">📍</div>
-        <h3 class="info-card-label">Local</h3>
-        <p class="info-card-value">AREAC</p>
-        <p class="info-card-sub">Rua Paranavaí, 1370 · Pacaembu, Cascavel - PR</p>
-      </div>
-    </div>
-
-    <div class="map-wrapper reveal">
-      <iframe
-        title="Localização AREAC - Cascavel PR"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3629.7600!2d-53.4650!3d-24.9570!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3d7c1a0000001%3A0x1!2sRua%20Paranava%C3%AD%2C%201370%20-%20Pacaembu%2C%20Cascavel%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
-
-  <!-- ===== LISTA DE PRESENTES ===== -->
-  <section id="presentes" class="section-presentes">
-    <div class="section-header">
-      <p class="section-pre">Com carinho</p>
-      <h2 class="section-title">Lista de Presentes</h2>
-      <div class="section-divider">
-        <svg viewBox="0 0 160 20" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="10" x2="60" y2="10" stroke="currentColor" stroke-width="0.8"/>
-          <path d="M80 4 L84 10 L80 16 L76 10 Z" fill="currentColor"/>
-          <line x1="100" y1="10" x2="160" y2="10" stroke="currentColor" stroke-width="0.8"/>
-        </svg>
-      </div>
-      <p class="section-sub">
-        Cada presente é uma forma de carinho. Se preferir, você também pode fazer uma contribuição livre via Pix. 💛
-      </p>
-    </div>
-
-    <div class="gifts-grid" id="giftsGrid">
-
-      <div class="gift-card reveal" data-id="1" data-price="89.90" data-name="Porta-retratos Artesanal">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1583394293291-1e1e8ef38f4e?w=400&q=80" alt="Porta-retratos" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Porta-retratos Artesanal</h3>
-          <p class="gift-desc">Feito à mão em madeira de lei, para guardar os melhores momentos do casal.</p>
-          <p class="gift-price">R$ 89,90</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
+      <div class="info-grid">
+        <article class="info-card reveal">
+          <span class="card-icon">12</span>
+          <h3>Data</h3>
+          <p>12 de Setembro de 2026, sábado.</p>
+        </article>
+        <article class="info-card reveal">
+          <span class="card-icon">16h</span>
+          <h3>Horário</h3>
+          <p>A cerimônia começa pontualmente às 16h.</p>
+        </article>
+        <article class="info-card reveal">
+          <span class="card-icon">PR</span>
+          <h3>Local</h3>
+          <p>AREAC · Rua Paranavaí, 1370 · Cascavel, PR.</p>
+        </article>
       </div>
 
-      <div class="gift-card reveal" data-id="2" data-price="149.00" data-name="Kit Vinho Especial">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Kit Vinho" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Kit Vinho Especial</h3>
-          <p class="gift-desc">Duas garrafas de vinho selecionado + taças de cristal para brindar ao amor.</p>
-          <p class="gift-price">R$ 149,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
+      <div class="map-shell reveal">
+        <iframe
+          title="Localização AREAC - Cascavel PR"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3629.7600!2d-53.4650!3d-24.9570!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3d7c1a0000001%3A0x1!2sRua%20Paranava%C3%AD%2C%201370%20-%20Pacaembu%2C%20Cascavel%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="presentes" class="section gifts-section">
+      <div class="section-header reveal">
+        <p class="eyebrow">Com carinho</p>
+        <h2>Lista de Presentes</h2>
+        <p>Escolha um presente, faça o Pix e confirme seus dados para os noivos acompanharem tudo com carinho.</p>
       </div>
 
-      <div class="gift-card reveal" data-id="3" data-price="220.00" data-name="Livro de Mensagens dos Convidados">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&q=80" alt="Livro de Mensagens" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Livro de Mensagens dos Convidados</h3>
-          <p class="gift-desc">Álbum personalizado para os convidados deixarem suas mensagens e bênçãos.</p>
-          <p class="gift-price">R$ 220,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
+      <div class="gift-toolbar reveal" aria-label="Filtros da lista de presentes">
+        <label class="search-field">
+          <span>Buscar</span>
+          <input id="giftSearch" type="search" placeholder="Buscar por nome do presente" autocomplete="off" />
+        </label>
+        <label>
+          <span>Ordenar</span>
+          <select id="giftSort">
+            <option value="featured">Destaques</option>
+            <option value="price-asc">Menor valor</option>
+            <option value="price-desc">Maior valor</option>
+            <option value="name">Nome</option>
+          </select>
+        </label>
       </div>
 
-      <div class="gift-card reveal" data-id="4" data-price="180.00" data-name="Jogo de Xícaras de Porcelana">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80" alt="Xícaras" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Jogo de Xícaras de Porcelana</h3>
-          <p class="gift-desc">6 xícaras com pires em porcelana branca delicada, ideal para o café da manhã a dois.</p>
-          <p class="gift-price">R$ 180,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
+      <div class="gift-summary reveal" id="giftSummary">
+        <span><strong id="totalGifts">0</strong> presentes</span>
+        <span>Todos podem contribuir com o mesmo presente</span>
       </div>
 
-      <div class="gift-card reveal" data-id="5" data-price="260.00" data-name="Jogo de Toalhas de Banho">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&q=80" alt="Toalhas" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
+      <div class="gifts-grid" id="giftsGrid" aria-live="polite"></div>
+      <div class="gift-load-more-wrap" id="giftLoadMoreWrap" hidden>
+        <button class="btn btn-dark gift-load-more" id="giftLoadMore" type="button">Ver mais presentes</button>
+      </div>
+      <p class="empty-state" id="giftEmptyState" hidden>Nenhum presente encontrado com esses filtros.</p>
+    </section>
+
+    <section id="rsvp" class="section rsvp-section">
+      <div class="rsvp-card reveal">
+        <div class="section-header">
+          <p class="eyebrow">Aguardamos você</p>
+          <h2>Confirme sua Presença</h2>
+          <p>Sua presença é o nosso maior presente. Confirme até 01 de Agosto de 2026.</p>
         </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Jogo de Toalhas de Banho</h3>
-          <p class="gift-desc">Kit com 4 toalhas felpudas de algodão 500g/m², macias e absorventes.</p>
-          <p class="gift-price">R$ 260,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
+        <div class="rsvp-form">
+          <label>
+            <span>Seu nome completo</span>
+            <input type="text" id="rsvp-nome" placeholder="Ex: João da Silva" autocomplete="name" />
+          </label>
+          <label>
+            <span>Número de pessoas</span>
+            <div class="number-stepper">
+              <button id="btn-menos" type="button" aria-label="Diminuir">−</button>
+              <input type="number" id="rsvp-pessoas" value="1" min="1" max="20" readonly />
+              <button id="btn-mais" type="button" aria-label="Aumentar">+</button>
+            </div>
+          </label>
+          <button class="btn btn-dark" id="btn-confirmar-presenca" type="button">Confirmar via WhatsApp</button>
         </div>
       </div>
+    </section>
 
-      <div class="gift-card reveal" data-id="6" data-price="350.00" data-name="Conjunto de Panelas Premium">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Panelas" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Conjunto de Panelas Premium</h3>
-          <p class="gift-desc">5 peças antiaderentes de alta qualidade para o novo lar do casal.</p>
-          <p class="gift-price">R$ 350,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
+    <section class="section closing-section">
+      <div class="closing-inner reveal">
+        <p class="eyebrow">Com amor</p>
+        <h2>Obrigado!</h2>
+        <p>Agradecemos por fazerem parte deste momento tão especial. Estamos muito ansiosos para celebrar juntos.</p>
+        <strong>Éric &amp; Valeria</strong>
       </div>
+    </section>
+  </main>
 
-      <div class="gift-card reveal" data-id="7" data-price="390.00" data-name="Fritadeira Air Fryer">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1612857894-0474a35e5c53?w=400&q=80" alt="Air Fryer" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Fritadeira Air Fryer 5L</h3>
-          <p class="gift-desc">Preparo saudável e rápido para o dia a dia do casal, sem óleo e com muito sabor.</p>
-          <p class="gift-price">R$ 390,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
-      </div>
-
-      <div class="gift-card reveal" data-id="8" data-price="480.00" data-name="Aparelho de Jantar 20 Peças">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" alt="Aparelho de Jantar" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Aparelho de Jantar 20 Peças</h3>
-          <p class="gift-desc">Porcelana branca com acabamento dourado, perfeito para receber com elegância.</p>
-          <p class="gift-price">R$ 480,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
-      </div>
-
-      <div class="gift-card reveal" data-id="9" data-price="560.00" data-name="Processador de Alimentos">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=400&q=80" alt="Processador" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Processador de Alimentos</h3>
-          <p class="gift-desc">Multiprocessador 12 funções para facilitar o dia a dia na cozinha do novo lar.</p>
-          <p class="gift-price">R$ 560,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
-      </div>
-
-      <div class="gift-card reveal" data-id="10" data-price="620.00" data-name="Cafeteira Espresso">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&q=80" alt="Cafeteira" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Cafeteira Espresso</h3>
-          <p class="gift-desc">Máquina de café profissional com vaporizador de leite, para começar os dias juntos com estilo.</p>
-          <p class="gift-price">R$ 620,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
-      </div>
-
-      <div class="gift-card reveal" data-id="11" data-price="750.00" data-name="Liquidificador de Alta Potência">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400&q=80" alt="Liquidificador" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Liquidificador de Alta Potência</h3>
-          <p class="gift-desc">1200W com jarra de vidro temperado e 12 velocidades — vitaminas e smoothies perfeitos.</p>
-          <p class="gift-price">R$ 750,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
-      </div>
-
-      <div class="gift-card reveal" data-id="12" data-price="890.00" data-name="Jogo de Cama King 400 Fios">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80" alt="Jogo de Cama" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Jogo de Cama King 400 Fios</h3>
-          <p class="gift-desc">Lençol de algodão egípcio com 7 peças, maciez e durabilidade incomparáveis.</p>
-          <p class="gift-price">R$ 890,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
-      </div>
-
-      <div class="gift-card reveal" data-id="13" data-price="980.00" data-name="Aspirador Robô Inteligente">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Aspirador Robô" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Aspirador Robô Inteligente</h3>
-          <p class="gift-desc">Limpeza automática programável com mapeamento do lar — mais tempo para o casal curtir junto.</p>
-          <p class="gift-price">R$ 980,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
-      </div>
-
-      <div class="gift-card reveal" data-id="14" data-price="1200.00" data-name="Adega Climatizada 12 Garrafas">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&q=80" alt="Adega" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Adega Climatizada 12 Garrafas</h3>
-          <p class="gift-desc">Temperatura precisa e design elegante para guardar os vinhos especiais do casal.</p>
-          <p class="gift-price">R$ 1.200,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
-      </div>
-
-      <div class="gift-card reveal" data-id="15" data-price="1500.00" data-name="Smartwatch Premium">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80" alt="Smartwatch" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">Smartwatch Premium</h3>
-          <p class="gift-desc">Relógio inteligente com monitoramento de saúde, notificações e design sofisticado.</p>
-          <p class="gift-price">R$ 1.500,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
-      </div>
-
-      <div class="gift-card reveal" data-id="16" data-price="2500.00" data-name="Contribuição para a Lua de Mel">
-        <div class="gift-img-wrap">
-          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=80" alt="Lua de Mel" loading="lazy"/>
-          <div class="gift-gifted-overlay"><span>✔ Presenteado</span></div>
-        </div>
-        <div class="gift-body">
-          <h3 class="gift-name">✈ Contribuição para a Lua de Mel</h3>
-          <p class="gift-desc">Ajude o casal a realizar o sonho de conhecer a Europa na primeira viagem como casados.</p>
-          <p class="gift-price">R$ 2.500,00</p>
-          <button class="btn-presentear" onclick="abrirModal(this)">🎁 Presentear</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== RSVP ===== -->
-  <section id="rsvp" class="section-rsvp">
-    <div class="rsvp-inner">
-      <div class="section-header">
-        <p class="section-pre">Aguardamos você</p>
-        <h2 class="section-title">Confirme sua Presença</h2>
-        <div class="section-divider">
-          <svg viewBox="0 0 160 20" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0" y1="10" x2="60" y2="10" stroke="currentColor" stroke-width="0.8"/>
-            <path d="M80 4 L84 10 L80 16 L76 10 Z" fill="currentColor"/>
-            <line x1="100" y1="10" x2="160" y2="10" stroke="currentColor" stroke-width="0.8"/>
-          </svg>
-        </div>
-        <p class="section-sub">Sua presença é o melhor presente. Por favor confirme até 01 de Agosto de 2026. 💛</p>
-      </div>
-
-      <div class="rsvp-form-card reveal">
-        <div class="rsvp-field">
-          <label class="rsvp-label" for="rsvp-nome">Seu nome completo</label>
-          <input
-            type="text"
-            id="rsvp-nome"
-            class="rsvp-input"
-            placeholder="Ex: João da Silva"
-            autocomplete="name"
-          />
-        </div>
-        <div class="rsvp-field">
-          <label class="rsvp-label" for="rsvp-pessoas">Número de pessoas (incluindo você)</label>
-          <div class="rsvp-number-wrap">
-            <button class="rsvp-num-btn" id="btn-menos" aria-label="Diminuir">−</button>
-            <input
-              type="number"
-              id="rsvp-pessoas"
-              class="rsvp-input rsvp-input-number"
-              value="1"
-              min="1"
-              max="20"
-              readonly
-            />
-            <button class="rsvp-num-btn" id="btn-mais" aria-label="Aumentar">+</button>
-          </div>
-        </div>
-        <button class="btn-gold btn-rsvp" color="#9e8b72" id="btn-confirmar-presenca">
-          <svg viewBox="0 0 24 24" width="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Confirmar presença via WhatsApp
-        </button>
-        <p class="rsvp-hint">Você será redirecionado ao WhatsApp com uma mensagem já preenchida.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MENSAGEM FINAL ===== -->
-  <section class="section-obrigado">
-    <div class="obrigado-inner reveal">
-      <div class="obrigado-ornament">
-        <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="20" x2="75" y2="20" stroke="currentColor" stroke-width="0.8"/>
-          <path d="M100 8 L106 20 L100 32 L94 20 Z" fill="none" stroke="currentColor" stroke-width="0.8"/>
-          <circle cx="100" cy="20" r="3" fill="currentColor"/>
-          <line x1="125" y1="20" x2="200" y2="20" stroke="currentColor" stroke-width="0.8"/>
-        </svg>
-      </div>
-      <h2 class="obrigado-title">Obrigado!</h2>
-      <p class="obrigado-text">
-        Agradecemos imensamente por fazerem parte deste momento tão especial em nossas vidas.<br/>
-        Cada um de vocês tem um lugar especial em nossos corações.<br/>
-        Mal podemos esperar para celebrar juntos!
-      </p>
-      <p class="obrigado-assinatura">Com amor, <em>Éric &amp; Valeria</em></p>
-      <div class="obrigado-ornament">
-        <svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="20" x2="75" y2="20" stroke="currentColor" stroke-width="0.8"/>
-          <path d="M100 8 L106 20 L100 32 L94 20 Z" fill="none" stroke="currentColor" stroke-width="0.8"/>
-          <circle cx="100" cy="20" r="3" fill="currentColor"/>
-          <line x1="125" y1="20" x2="200" y2="20" stroke="currentColor" stroke-width="0.8"/>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p class="footer-names">Éric &amp; Valeria</p>
-    <p class="footer-date">12 · 09 · 2026</p>
-    <div class="footer-verse">
-      <p class="footer-quote">"Assim, eles já não são dois, mas sim uma só carne. Portanto, o que Deus uniu, ninguém separa"</p>
-      <p class="footer-reference">Mateus 19:6</p>
+    <p>"Assim, eles já não são dois, mas sim uma só carne."</p>
+    <small>Mateus 19:6</small>
+    <div class="footer-credit">
+      <span>Copyright © 2026 - Éric &amp; Valéria - Todos os Direitos Reservados</span>
+      <span>Desenvolvido por <a href="https://github.com/eduardoalmeidajesus" target="_blank" rel="noopener noreferrer">Eduardo Jesus</a></span>
     </div>
-    <p class="footer-credit">Feito com ❤️ para o dia mais especial</p>
   </footer>
 
-  <!-- ===== MODAL PIX ===== -->
-  <div id="pixModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalGiftName">
+  <div id="giftModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalGiftName">
     <div class="modal-box">
-      <button class="modal-close" onclick="fecharModal()" aria-label="Fechar">
-        <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 6L6 18M6 6l12 12"/>
-        </svg>
-      </button>
+      <button class="modal-close" id="modalClose" type="button" aria-label="Fechar">×</button>
       <div class="modal-header">
-        <div class="modal-icon">🎁</div>
-        <h3 id="modalGiftName">Nome do Presente</h3>
+        <p class="eyebrow">Confirmar presente</p>
+        <h3 id="modalGiftName">Presente</h3>
         <p id="modalGiftPrice" class="modal-price">R$ 0,00</p>
       </div>
-      <div class="modal-pix">
-        <p class="pix-label">Chave Pix</p>
-        <div class="pix-key-box">
-          <span id="pixKey">casamento@ericvaleria.com.br</span>
-          <button class="btn-copy" onclick="copiarPix()" title="Copiar chave Pix">
-            <svg viewBox="0 0 24 24" width="16" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
-            </svg>
-            <span id="copyText">Copiar</span>
-          </button>
+      <div class="pix-box">
+        <span>Chave Pix</span>
+        <div>
+          <strong id="pixKey">skravonskiericanderson@gmail.com</strong>
+          <button class="btn-copy" id="copyPix" type="button">Copiar</button>
         </div>
-        <p class="pix-hint">📱 Abra seu aplicativo bancário, vá em Pix e cole a chave acima</p>
       </div>
-      <div class="modal-steps">
-        <div class="step"><span class="step-num">1</span><span>Copie a chave Pix acima</span></div>
-        <div class="step"><span class="step-num">2</span><span>Faça a transferência no valor indicado</span></div>
-        <div class="step"><span class="step-num">3</span><span>Volte aqui e confirme o presente</span></div>
+      <div class="pix-qr-box">
+        <span>QR Code Pix do presente</span>
+        <img id="pixQrImage" alt="QR Code Pix do presente" loading="lazy" />
+        <small id="pixQrCaption">Escaneie para pagar exatamente o valor deste presente.</small>
       </div>
-      <button class="btn-gold btn-full" onclick="confirmarPresente()">✔ Já fiz o Pix!</button>
+      <div class="pix-copy-box">
+        <span>Pix Copia e Cola</span>
+        <textarea id="pixPayload" rows="4" readonly aria-label="Código Pix copia e cola"></textarea>
+        <button class="btn-copy btn-copy-full" id="copyPixPayload" type="button">Copiar Pix Copia e Cola</button>
+      </div>
+      <form id="giftForm" class="gift-form">
+        <label>
+          <span>Seu nome</span>
+          <input id="giverName" name="giverName" required autocomplete="name" placeholder="Digite seu nome" />
+        </label>
+        <label>
+          <span>Mensagem</span>
+          <textarea id="giverMessage" name="message" rows="3" placeholder="Deixe uma mensagem para os noivos"></textarea>
+        </label>
+        <button class="btn btn-primary btn-full" type="submit">Já fiz o Pix e quero confirmar</button>
+      </form>
     </div>
   </div>
 
-  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
-
-  <script src="script.js"></script>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js?v=20260424-5"></script>
 </body>
 </html>

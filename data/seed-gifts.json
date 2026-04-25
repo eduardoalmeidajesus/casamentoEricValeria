@@ -1,0 +1,714 @@
+[
+  {
+    "id": "kit-panos-prato",
+    "name": "Kit de panos de prato",
+    "description": "Um kit delicado para deixar a cozinha nova mais prática e bonita no dia a dia.",
+    "price": 60,
+    "image": "/assets/gifts/kit-panos-prato.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "kit-toalha-banho",
+    "name": "Kit toalha de banho",
+    "description": "Toalhas macias para o banheiro do novo lar dos noivos.",
+    "price": 190,
+    "image": "/assets/gifts/kit-toalha-banho.jpg",
+    "category": "Banho"
+  },
+  {
+    "id": "tapete-banheiro",
+    "name": "Tapete de banheiro",
+    "description": "Conforto e acabamento para uma rotina mais aconchegante.",
+    "price": 70,
+    "image": "/assets/gifts/tapete-banheiro.jpg",
+    "category": "Banho"
+  },
+  {
+    "id": "jogo-copos",
+    "name": "Jogo de copos",
+    "description": "Copos versáteis para receber amigos e família com carinho.",
+    "price": 60,
+    "image": "/assets/gifts/jogo-copos.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "porta-temperos",
+    "name": "Porta-temperos",
+    "description": "Organização bonita para os temperos que vão dar sabor à casa nova.",
+    "price": 70,
+    "image": "/assets/gifts/porta-temperos.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "air-fryer",
+    "name": "Air Fryer",
+    "description": "Praticidade para preparar refeições rápidas, leves e crocantes.",
+    "price": 350,
+    "image": "/assets/gifts/air-fryer.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "mesa-jantar",
+    "name": "Mesa de jantar",
+    "description": "Para reunir pessoas queridas e criar momentos especiais na casa nova.",
+    "price": 1900,
+    "image": "/assets/gifts/mesa-jantar.jpg",
+    "category": "Móveis"
+  },
+  {
+    "id": "faqueiro-completo",
+    "name": "Faqueiro completo",
+    "description": "Um faqueiro completo para refeições do cotidiano e ocasiões especiais.",
+    "price": 200,
+    "image": "/assets/gifts/faqueiro-completo.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "smart-tv-50",
+    "name": "Televisão Smart TV 50 polegadas",
+    "description": "Cinema em casa para os primeiros filmes e séries da vida a dois.",
+    "price": 2200,
+    "image": "/assets/gifts/smart-tv-50.jpg",
+    "category": "Eletrônicos"
+  },
+  {
+    "id": "kit-edredom-lencois",
+    "name": "Kit edredom e lençóis casal",
+    "description": "Cama bem posta, macia e pronta para dias de descanso.",
+    "price": 350,
+    "image": "/assets/gifts/kit-edredom-lencois.jpg",
+    "category": "Quarto"
+  },
+  {
+    "id": "liquidificador",
+    "name": "Liquidificador",
+    "description": "Para vitaminas, molhos e receitas rápidas no novo lar.",
+    "price": 250,
+    "image": "/assets/gifts/liquidificador.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "cafeteira",
+    "name": "Cafeteira",
+    "description": "Café quentinho para começar as manhãs com mais afeto.",
+    "price": 260,
+    "image": "/assets/gifts/cafeteira.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "jogo-panelas-completo",
+    "name": "Jogo de panelas completo",
+    "description": "Base essencial para receitas, almoços e jantares da nova casa.",
+    "price": 650,
+    "image": "/assets/gifts/jogo-panelas-completo.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "aspirador-po",
+    "name": "Aspirador de pó",
+    "description": "Mais praticidade para manter a casa limpa e organizada.",
+    "price": 500,
+    "image": "/assets/gifts/aspirador-po.jpg",
+    "category": "Casa"
+  },
+  {
+    "id": "lava-e-seca",
+    "name": "Máquina de lavar lava e seca",
+    "description": "Uma grande ajuda para a rotina do casal depois do casamento.",
+    "price": 3500,
+    "image": "/assets/gifts/lava-e-seca.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "cooktop",
+    "name": "Cooktop",
+    "description": "Funcionalidade e design para a cozinha dos noivos.",
+    "price": 550,
+    "image": "/assets/gifts/cooktop.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "rack-painel-tv",
+    "name": "Rack / Painel de TV",
+    "description": "Para organizar a sala e deixar os momentos de descanso mais bonitos.",
+    "price": 1100,
+    "image": "/assets/gifts/rack-painel-tv.jpg",
+    "category": "Móveis"
+  },
+  {
+    "id": "sanduicheira",
+    "name": "Sanduicheira",
+    "description": "Lanches rápidos para a rotina corrida da vida a dois.",
+    "price": 180,
+    "image": "/assets/gifts/sanduicheira.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "ventilador",
+    "name": "Ventilador",
+    "description": "Conforto para os dias mais quentes no novo lar.",
+    "price": 240,
+    "image": "/assets/gifts/ventilador.jpg",
+    "category": "Casa"
+  },
+  {
+    "id": "cortinas-sala",
+    "name": "Cortinas sala",
+    "description": "Um toque elegante para deixar a sala mais aconchegante.",
+    "price": 200,
+    "image": "/assets/gifts/cortinas-sala.jpg",
+    "category": "Decoração"
+  },
+  {
+    "id": "jogo-jantar-20",
+    "name": "Jogo de jantar completo 20 peças",
+    "description": "Mesa posta com elegância para receber bem.",
+    "price": 430,
+    "image": "/assets/gifts/jogo-jantar-20.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "guarda-roupa-casal",
+    "name": "Guarda-roupa casal",
+    "description": "Espaço e organização para o quarto dos noivos.",
+    "price": 2000,
+    "image": "/assets/gifts/guarda-roupa-casal.jpg",
+    "category": "Móveis"
+  },
+  {
+    "id": "jogo-americano",
+    "name": "Jogo americano 6 peças",
+    "description": "Detalhe charmoso para as refeições do dia a dia.",
+    "price": 90,
+    "image": "/assets/gifts/jogo-americano.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "kit-travessas",
+    "name": "Jogo de travessas",
+    "description": "Para servir almoços, jantares e receitas especiais.",
+    "price": 140,
+    "image": "/assets/gifts/kit-travessas.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "jogo-tacas",
+    "name": "Jogo de taças",
+    "description": "Um toque especial para brindar os bons momentos do casal.",
+    "price": 70,
+    "image": "/assets/gifts/jogo-tacas.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "potes-hermeticos",
+    "name": "Kit potes herméticos",
+    "description": "Organização para mantimentos e preparos da cozinha.",
+    "price": 180,
+    "image": "/assets/gifts/potes-hermeticos.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "utensilios-cozinha",
+    "name": "Kit de utensílios de cozinha",
+    "description": "Itens essenciais para preparar refeições com carinho.",
+    "price": 150,
+    "image": "/assets/gifts/utensilios-cozinha.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "ferro-passar",
+    "name": "Ferro de passar",
+    "description": "Praticidade para manter tudo em ordem no dia a dia.",
+    "price": 250,
+    "image": "/assets/gifts/ferro-passar.jpg",
+    "category": "Casa"
+  },
+  {
+    "id": "kit-assadeiras",
+    "name": "Kit de assadeiras",
+    "description": "Perfeito para receitas assadas, gratinados e sobremesas.",
+    "price": 260,
+    "image": "/assets/gifts/kit-assadeiras.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "pix-noiva-calma",
+    "name": "Pix para a noiva manter a calma na organização do casamento",
+    "description": "Um presente divertido para ajudar na organização do grande dia.",
+    "price": 200,
+    "image": "/assets/gifts/pix-noiva-calma.jpg",
+    "category": "Pix divertido"
+  },
+  {
+    "id": "pix-noivo-casamento",
+    "name": "Pix para ajudar o noivo a pagar o casamento",
+    "description": "Uma contribuição bem-humorada para aliviar o orçamento da festa.",
+    "price": 450,
+    "image": "/assets/gifts/pix-noivo-casamento.jpg",
+    "category": "Pix divertido"
+  },
+  {
+    "id": "tabua-corte",
+    "name": "Tábua de corte",
+    "description": "Item essencial para preparar refeições com segurança.",
+    "price": 130,
+    "image": "/assets/gifts/tabua-corte.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "chance-buque",
+    "name": "Aumente a chance de pegar o buquê da noiva",
+    "description": "Uma brincadeira leve e divertida para entrar no clima da festa.",
+    "price": 50,
+    "image": "/assets/gifts/chance-buque.jpg",
+    "category": "Pix divertido"
+  },
+  {
+    "id": "balanca-casal",
+    "name": "Balança para o casal não engordar",
+    "description": "Um presente divertido para acompanhar a rotina a dois.",
+    "price": 70,
+    "image": "/assets/gifts/balanca-casal.jpg",
+    "category": "Pix divertido"
+  },
+  {
+    "id": "caixa-ferramentas",
+    "name": "Caixa de ferramentas",
+    "description": "Para pequenos ajustes e conquistas práticas no novo lar.",
+    "price": 460,
+    "image": "/assets/gifts/caixa-ferramentas.jpg",
+    "category": "Casa"
+  },
+  {
+    "id": "talheres-completo",
+    "name": "Jogo de talheres completo",
+    "description": "Talheres bonitos e funcionais para completar a mesa.",
+    "price": 170,
+    "image": "/assets/gifts/talheres-completo.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "micro-ondas",
+    "name": "Micro-ondas",
+    "description": "Facilidade para aquecer refeições e simplificar a rotina.",
+    "price": 480,
+    "image": "/assets/gifts/micro-ondas.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "kit-churrasco",
+    "name": "Kit churrasco",
+    "description": "Para encontros deliciosos com família e amigos.",
+    "price": 180,
+    "image": "/assets/gifts/kit-churrasco.jpg",
+    "category": "Lazer"
+  },
+  {
+    "id": "lua-de-mel",
+    "name": "Contribuição para a lua de mel dos noivos",
+    "description": "Ajude os noivos a viverem memórias inesquecíveis na primeira viagem como casados.",
+    "price": 1200,
+    "image": "/assets/gifts/lua-de-mel.jpg",
+    "category": "Lua de mel"
+  },
+  {
+    "id": "panela-pressao-eletrica",
+    "name": "Panela de pressão elétrica",
+    "description": "Receitas práticas e seguras para o dia a dia.",
+    "price": 320,
+    "image": "/assets/gifts/panela-pressao-eletrica.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "travesseiros",
+    "name": "Travesseiros",
+    "description": "Mais conforto para noites tranquilas no novo lar.",
+    "price": 100,
+    "image": "/assets/gifts/travesseiros.jpg",
+    "category": "Quarto"
+  },
+  {
+    "id": "jarras-agua-suco",
+    "name": "Kit jarras de água e suco",
+    "description": "Ideal para servir com carinho em almoços e encontros especiais.",
+    "price": 60,
+    "image": "/assets/gifts/jarras-agua-suco.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "kit-mesa-posta",
+    "name": "Kit mesa posta",
+    "description": "Composição especial para deixar cada refeição mais bonita.",
+    "price": 180,
+    "image": "/assets/gifts/kit-mesa-posta.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "jogo-xicaras-6",
+    "name": "Jogo de 6 xícaras",
+    "description": "Para cafés, conversas e pausas afetuosas.",
+    "price": 170,
+    "image": "/assets/gifts/jogo-xicaras-6.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "gravata-fastpix",
+    "name": "Pix para o noivo fingir que não te viu na gravata",
+    "description": "Contribuição divertida para escapar com elegância da hora da gravata.",
+    "price": 400,
+    "image": "/assets/gifts/gravata-fastpix.jpg",
+    "category": "Pix divertido"
+  },
+  {
+    "id": "ps5-noivos",
+    "name": "PS5 para os noivos",
+    "description": "Diversão garantida para partidas sem brigas depois do casamento.",
+    "price": 3800,
+    "image": "/assets/gifts/ps5-noivos.jpg",
+    "category": "Eletrônicos"
+  },
+  {
+    "id": "escorredor-loucas",
+    "name": "Escorredor de louças",
+    "description": "Organização simples e útil para a bancada da cozinha.",
+    "price": 150,
+    "image": "/assets/gifts/escorredor-loucas.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "potes-guarda-mantimentos",
+    "name": "Kit potes guarda-mantimentos",
+    "description": "Mais praticidade para armazenar alimentos com cuidado.",
+    "price": 200,
+    "image": "/assets/gifts/potes-guarda-mantimentos.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "lixeira-cozinha",
+    "name": "Lixeira de cozinha",
+    "description": "Item prático para manter a cozinha funcional e limpa.",
+    "price": 60,
+    "image": "/assets/gifts/lixeira-cozinha.jpg",
+    "category": "Casa"
+  },
+  {
+    "id": "lixeira-banheiro",
+    "name": "Lixeira do banheiro",
+    "description": "Um detalhe simples que ajuda muito na rotina diária.",
+    "price": 75,
+    "image": "/assets/gifts/lixeira-banheiro.jpg",
+    "category": "Banho"
+  },
+  {
+    "id": "kit-banheiro",
+    "name": "Kit banheiro",
+    "description": "Conjunto útil para deixar o banheiro mais completo e organizado.",
+    "price": 90,
+    "image": "/assets/gifts/kit-banheiro.png",
+    "category": "Banho"
+  },
+  {
+    "id": "varal-roupa",
+    "name": "Varal de roupa",
+    "description": "Mais praticidade para a rotina da lavanderia.",
+    "price": 180,
+    "image": "/assets/gifts/varal-roupa.jpg",
+    "category": "Casa"
+  },
+  {
+    "id": "almoco-noivos",
+    "name": "Almoço na casa dos noivos",
+    "description": "Uma contribuição saborosa para estrear a casa com mesa cheia.",
+    "price": 250,
+    "image": "/assets/gifts/almoco-noivos.jpg",
+    "category": "Experiências"
+  },
+  {
+    "id": "kit-limpeza",
+    "name": "Kit limpeza de casa",
+    "description": "Vassoura, pá, rodo e balde para deixar tudo em ordem.",
+    "price": 200,
+    "image": "/assets/gifts/kit-limpeza.png",
+    "category": "Casa"
+  },
+  {
+    "id": "petisqueira",
+    "name": "Petisqueira",
+    "description": "Para servir petiscos em encontros leves e descontraídos.",
+    "price": 40,
+    "image": "/assets/gifts/petisqueira.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "chaleira-eletrica",
+    "name": "Chaleira elétrica",
+    "description": "Água quente em poucos minutos para cafés e chás.",
+    "price": 90,
+    "image": "/assets/gifts/chaleira-eletrica.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "mesa-centro",
+    "name": "Mesa de centro",
+    "description": "Um detalhe funcional para completar a sala com charme.",
+    "price": 170,
+    "image": "/assets/gifts/mesa-centro.jpg",
+    "category": "Móveis"
+  },
+  {
+    "id": "lenco-noiva",
+    "name": "Lenço para noiva não borrar a maquiagem",
+    "description": "Um carinho divertido para emoções fortes no grande dia.",
+    "price": 20,
+    "image": "/assets/gifts/lenco-noiva.jpg",
+    "category": "Pix divertido"
+  },
+  {
+    "id": "forno-eletrico",
+    "name": "Forno elétrico",
+    "description": "Perfeito para assados, massas e receitas especiais.",
+    "price": 780,
+    "image": "/assets/gifts/forno-eletrico.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "deus-tocou-coracao",
+    "name": "Deus tocou seu coração",
+    "description": "Uma contribuição generosa para abençoar a nova fase dos noivos.",
+    "price": 1500,
+    "image": "/assets/gifts/deus-tocou-coracao.jpg",
+    "category": "Pix divertido"
+  },
+  {
+    "id": "fast-pass-buffet",
+    "name": "Fast Pass para a fila do buffet",
+    "description": "Uma brincadeira divertida para quem quer garantir prioridade no jantar.",
+    "price": 90,
+    "image": "/assets/gifts/fast-pass-buffet.jpg",
+    "category": "Pix divertido"
+  },
+  {
+    "id": "mesa-escritorio",
+    "name": "Mesa de escritório para os noivos",
+    "description": "Espaço funcional para trabalho, estudos e organização.",
+    "price": 400,
+    "image": "/assets/gifts/mesa-escritorio.jpg",
+    "category": "Móveis"
+  },
+  {
+    "id": "sal-noiva",
+    "name": "Sal para a noiva não desmaiar",
+    "description": "Um presente simbólico e bem-humorado para o grande dia.",
+    "price": 10,
+    "image": "/assets/gifts/sal-noiva.jpg",
+    "category": "Pix divertido"
+  },
+  {
+    "id": "jogo-sobremesa",
+    "name": "Jogo de sobremesa",
+    "description": "Ideal para servir doces e celebrar bons momentos.",
+    "price": 50,
+    "image": "/assets/gifts/jogo-sobremesa.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "sofa",
+    "name": "Sofá",
+    "description": "Conforto para descansar, conversar e curtir a casa nova.",
+    "price": 2300,
+    "image": "/assets/gifts/sofa.jpg",
+    "category": "Móveis"
+  },
+  {
+    "id": "cadeira-escritorio",
+    "name": "Cadeira de escritório",
+    "description": "Mais conforto para trabalho, estudo e rotina do casal.",
+    "price": 240,
+    "image": "/assets/gifts/cadeira-escritorio.jpg",
+    "category": "Móveis"
+  },
+  {
+    "id": "tapete-sala",
+    "name": "Tapete para a sala",
+    "description": "Um toque de aconchego para completar a decoração.",
+    "price": 150,
+    "image": "/assets/gifts/tapete-sala.png",
+    "category": "Decoração"
+  },
+  {
+    "id": "maquina-pao",
+    "name": "Máquina de pão",
+    "description": "Pão quentinho e cheiro de casa nova pela manhã.",
+    "price": 650,
+    "image": "/assets/gifts/maquina-pao.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "kit-cabides",
+    "name": "Kit de cabides",
+    "description": "Organização simples para deixar o guarda-roupa em ordem.",
+    "price": 150,
+    "image": "/assets/gifts/kit-cabides.jpg",
+    "category": "Quarto"
+  },
+  {
+    "id": "robo-aspirador",
+    "name": "Robô aspirador",
+    "description": "Praticidade para manter a casa limpa com menos esforço.",
+    "price": 4000,
+    "image": "/assets/gifts/robo-aspirador.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "jogo-cama-casal",
+    "name": "Jogo de cama casal",
+    "description": "Lençóis e peças para uma cama bonita e confortável.",
+    "price": 450,
+    "image": "/assets/gifts/jogo-cama-casal.jpg",
+    "category": "Quarto"
+  },
+  {
+    "id": "frigideiras-antiaderentes",
+    "name": "Kit frigideiras antiaderentes",
+    "description": "Para preparar refeições com praticidade e menos bagunça.",
+    "price": 160,
+    "image": "/assets/gifts/frigideiras-antiaderentes.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "raladores",
+    "name": "Raladores",
+    "description": "Pequenos utensílios que fazem diferença na cozinha.",
+    "price": 50,
+    "image": "/assets/gifts/raladores.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "kit-medidores",
+    "name": "Kit de medidores",
+    "description": "Precisão para receitas doces e salgadas.",
+    "price": 25,
+    "image": "/assets/gifts/kit-medidores.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "peneiras",
+    "name": "Peneiras",
+    "description": "Utensílios úteis para massas, bolos e preparos variados.",
+    "price": 60,
+    "image": "/assets/gifts/peneiras.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "batedeira",
+    "name": "Batedeira",
+    "description": "Uma ajuda prática para massas, bolos e sobremesas.",
+    "price": 330,
+    "image": "/assets/gifts/batedeira.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "mop-limpeza",
+    "name": "Mop de limpeza",
+    "description": "Praticidade para manter a casa limpa com menos esforço.",
+    "price": 150,
+    "image": "/assets/gifts/mop-limpeza.jpg",
+    "category": "Casa"
+  },
+  {
+    "id": "potes-hermeticos-organizadores",
+    "name": "Jogo de potes herméticos organizadores",
+    "description": "Mais organização para a despensa e para a geladeira.",
+    "price": 250,
+    "image": "/assets/gifts/potes-hermeticos-organizadores.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "cabeceira",
+    "name": "Cabeceira de cama",
+    "description": "Acabamento aconchegante para o quarto do casal.",
+    "price": 350,
+    "image": "/assets/gifts/cabeceira.jpg",
+    "category": "Quarto"
+  },
+  {
+    "id": "jogo-xicaras",
+    "name": "Jogo de xícaras",
+    "description": "Para cafés especiais, visitas e conversas sem pressa.",
+    "price": 170,
+    "image": "/assets/gifts/jogo-xicaras.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "talheres-tramontina",
+    "name": "Jogo de talheres Tramontina",
+    "description": "Talheres resistentes e bonitos para completar a mesa.",
+    "price": 200,
+    "image": "/assets/gifts/talheres-tramontina.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "porta-guardanapo",
+    "name": "Porta guardanapo",
+    "description": "Pequeno detalhe que deixa a mesa posta mais elegante.",
+    "price": 40,
+    "image": "/assets/gifts/porta-guardanapo.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "streaming-6-meses",
+    "name": "6 meses de plataformas de streaming",
+    "description": "Entretenimento garantido para noites tranquilas depois do casamento.",
+    "price": 360,
+    "image": "/assets/gifts/streaming-6-meses.jpg",
+    "category": "Experiências"
+  },
+  {
+    "id": "cortinas-blackout-quarto",
+    "name": "Cortinas blackout quarto",
+    "description": "Blackout para noites mais confortáveis e um quarto mais aconchegante.",
+    "price": 120,
+    "image": "/assets/gifts/cortinas-blackout-quarto.jpg",
+    "category": "Quarto"
+  },
+  {
+    "id": "cortina-cozinha",
+    "name": "Cortina cozinha",
+    "description": "Um toque funcional e delicado para completar a cozinha dos noivos.",
+    "price": 90,
+    "image": "/assets/gifts/cortina-cozinha.jpg",
+    "category": "Cozinha"
+  },
+  {
+    "id": "cafeteira-francesa",
+    "name": "Cafeteira francesa",
+    "description": "Para cafés especiais e momentos tranquilos a dois.",
+    "price": 70,
+    "image": "/assets/gifts/cafeteira-francesa.jpg",
+    "category": "Mesa posta"
+  },
+  {
+    "id": "maquina-waffles",
+    "name": "Máquina de waffles",
+    "description": "Para cafés da manhã divertidos e receitas doces na casa nova.",
+    "price": 160,
+    "image": "/assets/gifts/maquina-waffles.jpg",
+    "category": "Eletrodomésticos"
+  },
+  {
+    "id": "cesto-roupas",
+    "name": "Cesto de roupas",
+    "description": "Organização prática para a rotina da lavanderia.",
+    "price": 80,
+    "image": "/assets/gifts/cesto-roupas.jpg",
+    "category": "Casa"
+  },
+  {
+    "id": "forma-cupcake",
+    "name": "Forma de cupcake",
+    "description": "Perfeita para preparar doces e celebrar pequenos momentos.",
+    "price": 40,
+    "image": "/assets/gifts/forma-cupcake.jpg",
+    "category": "Cozinha"
+  }
+]

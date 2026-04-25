@@ -1,0 +1,5 @@
+data/db.json
+data/amazon-image-cache.json
+.debug-images/
+*.log
+node_modules/

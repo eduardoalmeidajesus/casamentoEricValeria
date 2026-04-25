@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel dos Noivos | Eric &amp; Valeria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #f7f1e8; }
+    .admin-shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 34px 0 56px; }
+    .admin-hero { display: flex; justify-content: space-between; gap: 22px; align-items: flex-end; margin-bottom: 24px; }
+    .admin-hero h1 { margin: 0; font: 600 clamp(2.8rem, 7vw, 5rem)/.94 var(--font-display); }
+    .admin-hero p { margin: 10px 0 0; color: var(--muted); }
+    .admin-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .admin-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 22px; }
+    .admin-tab {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,250,244,.86);
+      color: var(--ink);
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .admin-tab.active {
+      background: var(--ink);
+      color: var(--white);
+      border-color: var(--ink);
+    }
+    .admin-panel[hidden] { display: none; }
+    .admin-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+    .stat-card { padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,250,244,.82); }
+    .stat-card span { color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .stat-card strong {
+      display: block;
+      margin-top: 8px;
+      font: 700 2.4rem/.9 var(--font-numeric);
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum" 1, "lnum" 1;
+    }
+    td:nth-child(2),
+    td:nth-child(4) {
+      font-family: var(--font-numeric);
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum" 1, "lnum" 1;
+    }
+    .admin-toolbar { display: grid; grid-template-columns: 1fr 190px; gap: 12px; margin-bottom: 16px; }
+    .admin-table-wrap { overflow: auto; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,250,244,.86); }
+    table { width: 100%; border-collapse: collapse; min-width: 920px; }
+    th, td { padding: 14px 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: .68rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; background: rgba(242,234,223,.78); }
+    td { font-size: .92rem; }
+    .gift-title { font-weight: 800; }
+    .muted { color: var(--muted); }
+    .badge { display: inline-flex; padding: 6px 9px; border-radius: 999px; color: #fff; background: var(--sage); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .mini-btn { border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); padding: 8px 10px; cursor: pointer; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .empty-row { color: var(--muted); text-align: center; padding: 34px 16px; }
+    @media (max-width: 760px) {
+      .admin-hero { display: block; }
+      .admin-actions { margin-top: 18px; }
+      .admin-stats, .admin-toolbar { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-hero">
+      <div>
+        <p class="eyebrow">Área dos noivos</p>
+        <h1>Painel</h1>
+        <p>Acompanhe presentes confirmados e respostas de presença em um só lugar.</p>
+      </div>
+      <div class="admin-actions">
+        <a class="btn btn-primary" href="/">Voltar ao site</a>
+        <button class="btn btn-dark" id="refreshBtn" type="button">Atualizar</button>
+      </div>
+    </header>
+
+    <nav class="admin-tabs" aria-label="Abas do painel">
+      <button class="admin-tab active" type="button" data-tab="gifts">Presentes</button>
+      <button class="admin-tab" type="button" data-tab="rsvps">Presença</button>
+    </nav>
+
+    <section class="admin-panel" id="panel-gifts">
+      <section class="admin-stats" aria-label="Resumo dos presentes">
+        <article class="stat-card"><span>Presentes na lista</span><strong id="statTotal">0</strong></article>
+        <article class="stat-card"><span>Confirmações</span><strong id="statContributions">0</strong></article>
+        <article class="stat-card"><span>Valor confirmado</span><strong id="statValue">R$ 0</strong></article>
+      </section>
+
+      <section class="admin-toolbar" aria-label="Filtros do painel de presentes">
+        <label>
+          <span>Buscar</span>
+          <input id="adminSearch" type="search" placeholder="Item, nome ou mensagem" />
+        </label>
+        <label>
+          <span>Ordenação</span>
+          <select id="adminSort">
+            <option value="date-desc">Mais recentes</option>
+            <option value="price-desc">Maior valor</option>
+            <option value="price-asc">Menor valor</option>
+            <option value="name">Nome do presente</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="admin-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Presente</th>
+              <th>Valor</th>
+              <th>Nome</th>
+              <th>Mensagem</th>
+              <th>Confirmação</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="adminRows"></tbody>
+        </table>
+      </section>
+    </section>
+
+    <section class="admin-panel" id="panel-rsvps" hidden>
+      <section class="admin-stats" aria-label="Resumo das presenças">
+        <article class="stat-card"><span>Respostas</span><strong id="rsvpTotal">0</strong></article>
+        <article class="stat-card"><span>Pessoas</span><strong id="rsvpGuests">0</strong></article>
+        <article class="stat-card"><span>Última resposta</span><strong id="rsvpLatest">-</strong></article>
+      </section>
+
+      <section class="admin-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Pessoas</th>
+              <th>Mensagem</th>
+              <th>Data</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="rsvpRows"></tbody>
+        </table>
+      </section>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const state = {
+      gifts: [],
+      rsvps: [],
+      search: "",
+      sort: "date-desc",
+      activeTab: "gifts"
+    };
+
+    const rows = document.getElementById("adminRows");
+    const rsvpRows = document.getElementById("rsvpRows");
+    const toast = document.getElementById("toast");
+
+    document.getElementById("refreshBtn").addEventListener("click", load);
+    document.getElementById("adminSearch").addEventListener("input", (event) => {
+      state.search = event.target.value.trim().toLowerCase();
+      renderGiftPanel();
+    });
+    document.getElementById("adminSort").addEventListener("change", (event) => {
+      state.sort = event.target.value;
+      renderGiftPanel();
+    });
+
+    document.querySelectorAll("[data-tab]").forEach((button) => {
+      button.addEventListener("click", () => {
+        state.activeTab = button.dataset.tab;
+        syncTabs();
+      });
+    });
+
+    load();
+
+    async function load() {
+      const [giftsResponse, rsvpsResponse] = await Promise.all([
+        fetch("/api/admin/gifts", { cache: "no-store" }),
+        fetch("/api/admin/rsvps", { cache: "no-store" })
+      ]);
+
+      if (!giftsResponse.ok || !rsvpsResponse.ok) {
+        showToast("Não foi possível carregar o painel.");
+        return;
+      }
+
+      const giftsData = await giftsResponse.json();
+      const rsvpsData = await rsvpsResponse.json();
+      state.gifts = giftsData.gifts || [];
+      state.rsvps = rsvpsData.rsvps || [];
+      syncTabs();
+      renderGiftPanel();
+      renderRsvpPanel();
+    }
+
+    function syncTabs() {
+      document.querySelectorAll("[data-tab]").forEach((button) => {
+        button.classList.toggle("active", button.dataset.tab === state.activeTab);
+      });
+      document.getElementById("panel-gifts").hidden = state.activeTab !== "gifts";
+      document.getElementById("panel-rsvps").hidden = state.activeTab !== "rsvps";
+    }
+
+    function renderGiftPanel() {
+      const contributions = flattenContributions(state.gifts);
+      const totalValue = contributions.reduce((sum, item) => sum + item.price, 0);
+      document.getElementById("statTotal").textContent = state.gifts.length;
+      document.getElementById("statContributions").textContent = contributions.length;
+      document.getElementById("statValue").textContent = formatCurrency(totalValue);
+
+      const filtered = contributions
+        .filter((item) => {
+          const haystack = [item.name, item.category, item.giverName, item.giverContact, item.message].join(" ").toLowerCase();
+          return !state.search || haystack.includes(state.search);
+        })
+        .sort(sortGiftRows);
+
+      if (!filtered.length) {
+        rows.innerHTML = '<tr><td class="empty-row" colspan="6">Nenhuma confirmação encontrada.</td></tr>';
+        return;
+      }
+
+      rows.innerHTML = filtered.map((item) => `
+        <tr>
+          <td><div class="gift-title">${escapeHtml(item.name)}</div><div class="muted">${escapeHtml(item.category)}</div></td>
+          <td>${formatCurrency(item.price)}</td>
+          <td><span class="badge">${escapeHtml(item.giverName)}</span></td>
+          <td>${escapeHtml(item.message || "-")}</td>
+          <td>${new Date(item.confirmedAt).toLocaleString("pt-BR")}</td>
+          <td><button class="mini-btn" data-delete-contribution="${item.contributionId}" type="button">Remover</button></td>
+        </tr>
+      `).join("");
+
+      rows.querySelectorAll("[data-delete-contribution]").forEach((button) => {
+        button.addEventListener("click", () => deleteContribution(button.dataset.deleteContribution));
+      });
+    }
+
+    function renderRsvpPanel() {
+      document.getElementById("rsvpTotal").textContent = state.rsvps.length;
+      document.getElementById("rsvpGuests").textContent = state.rsvps.reduce((sum, item) => sum + Number(item.guestCount || 0), 0);
+      document.getElementById("rsvpLatest").textContent = state.rsvps.length
+        ? new Date(state.rsvps[0].createdAt).toLocaleDateString("pt-BR")
+        : "-";
+
+      if (!state.rsvps.length) {
+        rsvpRows.innerHTML = '<tr><td class="empty-row" colspan="5">Nenhuma presença confirmada ainda.</td></tr>';
+        return;
+      }
+
+      rsvpRows.innerHTML = state.rsvps.map((item) => `
+        <tr>
+          <td><div class="gift-title">${escapeHtml(item.name)}</div></td>
+          <td>${escapeHtml(String(item.guestCount))}</td>
+          <td>${escapeHtml(item.message || "-")}</td>
+          <td>${new Date(item.createdAt).toLocaleString("pt-BR")}</td>
+          <td><button class="mini-btn" data-delete-rsvp="${item.id}" type="button">Remover</button></td>
+        </tr>
+      `).join("");
+
+      rsvpRows.querySelectorAll("[data-delete-rsvp]").forEach((button) => {
+        button.addEventListener("click", () => deleteRsvp(button.dataset.deleteRsvp));
+      });
+    }
+
+    function flattenContributions(gifts) {
+      return gifts.flatMap((gift) => (gift.contributions || []).map((contribution) => ({
+        contributionId: contribution.id,
+        giftId: gift.id,
+        name: gift.name,
+        category: gift.category,
+        price: gift.price,
+        giverName: contribution.giverName,
+        giverContact: contribution.giverContact,
+        message: contribution.message,
+        confirmedAt: contribution.confirmedAt
+      })));
+    }
+
+    function sortGiftRows(a, b) {
+      if (state.sort === "price-desc") return b.price - a.price;
+      if (state.sort === "price-asc") return a.price - b.price;
+      if (state.sort === "name") return a.name.localeCompare(b.name, "pt-BR");
+      return new Date(b.confirmedAt || 0) - new Date(a.confirmedAt || 0);
+    }
+
+    async function deleteContribution(id) {
+      if (!confirm("Remover esta confirmação do painel?")) return;
+      const response = await fetch(`/api/admin/contributions/${encodeURIComponent(id)}`, { method: "DELETE" });
+      if (!response.ok) {
+        showToast("Não foi possível remover a confirmação.");
+        return;
+      }
+      await load();
+      showToast("Confirmação removida.");
+    }
+
+    async function deleteRsvp(id) {
+      if (!confirm("Remover esta presença do painel?")) return;
+      const response = await fetch(`/api/admin/rsvps/${encodeURIComponent(id)}`, { method: "DELETE" });
+      if (!response.ok) {
+        showToast("Não foi possível remover a presença.");
+        return;
+      }
+      await load();
+      showToast("Presença removida.");
+    }
+
+    function formatCurrency(value) {
+      return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
+    }
+
+    function escapeHtml(value) {
+      return String(value == null ? "" : value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    let timer = null;
+    function showToast(message) {
+      clearTimeout(timer);
+      toast.textContent = message;
+      toast.classList.add("show");
+      timer = setTimeout(() => toast.classList.remove("show"), 3200);
+    }
+  </script>
+</body>
+</html>

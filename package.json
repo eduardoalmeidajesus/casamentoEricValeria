@@ -1,0 +1,16 @@
+{
+  "name": "casamento-eric-valeria",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site do casamento de Éric e Valeria com lista de presentes persistente e painel administrativo.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "pg": "^8.11.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
