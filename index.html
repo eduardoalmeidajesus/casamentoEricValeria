@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260424-5" />
+  <link rel="stylesheet" href="style.css?v=20260425-1" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
 </head>
 <body>
@@ -27,11 +27,6 @@
     </div>
   </nav>
 
-  <div class="mobile-quick-actions" aria-label="Atalhos rápidos">
-    <a class="btn btn-primary" href="#presentes">Ver presentes</a>
-    <a class="btn btn-dark" href="#rsvp">Confirmar presença</a>
-  </div>
-
   <main>
     <section id="home" class="hero">
       <div class="hero-media" aria-hidden="true"></div>
@@ -46,7 +41,10 @@
           <div><strong id="minutos">--</strong><small>Min</small></div>
           <div><strong id="segundos">--</strong><small>Seg</small></div>
         </div>
-        <a class="btn btn-primary" href="#presentes">Ver Lista</a>
+        <div class="hero-actions" aria-label="Ações principais">
+          <a class="btn btn-primary" href="#presentes">VER LISTA DE PRESENTES</a>
+          <a class="btn btn-dark" href="#rsvp">CONFIRMAR PRESENÇA</a>
+        </div>
       </div>
       <a class="scroll-hint" href="#grande-dia" aria-label="Ir para detalhes do casamento">Detalhes</a>
     </section>
