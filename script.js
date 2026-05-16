@@ -1,7 +1,7 @@
 var PIX_KEY = "skravonskiericanderson@gmail.com";
 var PIX_CITY = "CASCAVEL";
 var PIX_MERCHANT = "ERIC E VALERIA";
-var WHATSAPP_NUMBER = "554599725915";
+var WHATSAPP_NUMBER = "554588019820";
 var WEDDING_DATE = new Date(2026, 8, 12, 16, 0, 0);
 
 var state = {
